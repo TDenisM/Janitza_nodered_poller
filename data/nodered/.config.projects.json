@@ -1,0 +1,8 @@
+{
+    "projects": {
+        "Janitza": {
+            "credentialSecret": false
+        }
+    },
+    "activeProject": "Janitza"
+}

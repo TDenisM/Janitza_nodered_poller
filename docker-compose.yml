@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  nodered:
+    image: nodered/node-red
+    ports:
+      - 18808:1880
+    volumes:
+      - ./data/nodered:/data
+    restart: always
+  influxdb:
+    image: influxdb
+    ports:
+      - 8086:8086
+    volumes:
+      - ./data/influxdb:/var/lib/influxdb2
+    restart: always
+  grafana:
+    image: grafana/grafana
+    ports:
+      - 3200:3000
+    user: '104'

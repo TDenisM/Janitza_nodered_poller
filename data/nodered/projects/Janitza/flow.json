@@ -1,0 +1,541 @@
+[
+    {
+        "id": "f6f2187d.f17ca8",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "22ea05c6.d1611a",
+        "type": "modbus-client",
+        "name": "",
+        "clienttype": "tcp",
+        "bufferCommands": true,
+        "stateLogEnabled": false,
+        "queueLogEnabled": true,
+        "tcpHost": "192.168.17.24",
+        "tcpPort": "8899",
+        "tcpType": "DEFAULT",
+        "serialPort": "/dev/ttyUSB",
+        "serialType": "RTU-BUFFERD",
+        "serialBaudrate": "9600",
+        "serialDatabits": "8",
+        "serialStopbits": "1",
+        "serialParity": "none",
+        "serialConnectionDelay": "100",
+        "unit_id": "1",
+        "commandDelay": "1",
+        "clientTimeout": "1000",
+        "reconnectOnTimeout": true,
+        "reconnectTimeout": "2000",
+        "parallelUnitIdsAllowed": true
+    },
+    {
+        "id": "4f4f59ad.cc6338",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "963da5dd.6c08c8",
+        "type": "ui_group",
+        "name": "Raw data from PDF",
+        "tab": "4f4f59ad.cc6338",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": true
+    },
+    {
+        "id": "4cee4c20.91d474",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "3cc11d24.ff01a2",
+        "type": "comment",
+        "z": "f6f2187d.f17ca8",
+        "name": "WARNING: please check you have started this container with a volume that is mounted to /data\\n otherwise any flow changes are lost when you redeploy or upgrade the container\\n (e.g. upgrade to a more recent node-red docker image).\\n  If you are using named volumes you can ignore this warning.\\n Double click or see info side panel to learn how to start Node-RED in Docker to save your work",
+        "info": "\nTo start docker with a bind mount volume (-v option), for example:\n\n```\ndocker run -it -p 1880:1880 -v /home/user/node_red_data:/data --name mynodered nodered/node-red\n```\n\nwhere `/home/user/node_red_data` is a directory on your host machine where you want to store your flows.\n\nIf you do not do this then you can experiment and redploy flows, but if you restart or upgrade the container the flows will be disconnected and lost. \n\nThey will still exist in a hidden data volume, which can be recovered using standard docker techniques, but that is much more complex than just starting with a named volume as described above.",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "9e6c6538.f0d568",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1270,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "65d8b028.d6304",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "decode",
+        "func": "let modbusList = flow.get('modbus');\nlet address = msg.modbusRequest.address;\nlet format = modbusList[address]['format'];\nvar parameterValue;\nswitch (format) {\n    case 'char':\n        parameterValue = parseInt(msg.payload.buffer.readUInt8BE(0, 1));\n        break;\n    case 'byte':\n        parameterValue = parseInt(msg.payload.buffer.readInt8BE(0, 1));\n        break;\n    case 'short':\n        parameterValue = parseInt(msg.payload.buffer.readInt16BE(0, 1));\n        break;\n    case 'int':\n        parameterValue = parseInt(msg.payload.buffer.readInt32BE(0, 2));\n        break;\n    case 'uint':\n        parameterValue = parseInt(msg.payload.buffer.readUInt32BE(0, 2));\n        break;\n    case 'long64':\n        parameterValue = parseInt(msg.payload.buffer.readBigInt64BE(0, 4));\n        break;\n    case 'float':\n        parameterValue = parseFloat(msg.payload.buffer.readFloatBE(0, 2).toFixed(3));\n        break;\n    case 'double':\n        parameterValue = parseFloat(msg.payload.buffer.readDoubleBE(0, 4).toFixed(3));\n        break;\n}\nmsg.payload = parameterValue;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 900,
+        "y": 880,
+        "wires": [
+            [
+                "3919adde.d9f6e2",
+                "c1e276f5.c15898",
+                "2a8590a3.a4508",
+                "900bffd1.c45a1"
+            ]
+        ]
+    },
+    {
+        "id": "e577deed.971de",
+        "type": "inject",
+        "z": "f6f2187d.f17ca8",
+        "d": true,
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 670,
+        "y": 560,
+        "wires": [
+            [
+                "39ec34b7.7549bc"
+            ]
+        ]
+    },
+    {
+        "id": "e5ac3997.9246c8",
+        "type": "delay",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 1210,
+        "y": 840,
+        "wires": [
+            [
+                "65d8b028.d6304"
+            ]
+        ]
+    },
+    {
+        "id": "39ec34b7.7549bc",
+        "type": "trigger",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "op1": "1",
+        "op2": "0",
+        "op1type": "str",
+        "op2type": "str",
+        "duration": "-250",
+        "extend": false,
+        "overrideDelay": false,
+        "units": "ms",
+        "reset": "",
+        "bytopic": "all",
+        "topic": "topic",
+        "outputs": 1,
+        "x": 860,
+        "y": 700,
+        "wires": [
+            [
+                "5486c6d.bb92e38"
+            ]
+        ]
+    },
+    {
+        "id": "1b28310a.ae2dff",
+        "type": "switch",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "timeout",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 670,
+        "y": 700,
+        "wires": [
+            [
+                "39ec34b7.7549bc"
+            ]
+        ]
+    },
+    {
+        "id": "c1e276f5.c15898",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "reset",
+                "pt": "msg",
+                "to": "true",
+                "tot": "bool"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 740,
+        "wires": [
+            [
+                "39ec34b7.7549bc"
+            ]
+        ]
+    },
+    {
+        "id": "5486c6d.bb92e38",
+        "type": "change",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "1",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 880,
+        "y": 660,
+        "wires": [
+            [
+                "2a8590a3.a4508"
+            ]
+        ]
+    },
+    {
+        "id": "7af46604.7ba1c8",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "render raw data",
+        "func": "let result = {};\nlet re = /\\s+/\nfor (let line of msg.payload.data.split('\\n')) {\n    if (line != '') {\n        var split = line.trim().split(re);\n        result[split[0]] = {'format': split[1], 'rw': split[2], 'designation': split[3], 'unit': split[4], 'note': split.slice(5).join(' ')};\n    }\n}\nflow.set('modbus', result);\nmsg = {};\nmsg.payload = result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 1340,
+        "wires": [
+            [
+                "84a968cb.251478",
+                "572b3a0b.c87bd4"
+            ]
+        ]
+    },
+    {
+        "id": "84a968cb.251478",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "rendered to text",
+        "func": "var strs = '';\nfor (var key in msg.payload) {\n    var str = [];\n    if (key) {\n        str.push(key);\n        for (var i in msg.payload[key]) {\n            if (msg.payload[key][i]) {\n                str.push(msg.payload[key][i].replace( /^\\s+|\\s+$/g, '' ));\n            }\n        }\n        str.push('\\n');\n        strs += str.join(' ');\n    }\n}\nmsg = {};\nmsg.payload = {};\nmsg.payload.data = strs;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 1280,
+        "wires": [
+            [
+                "66898f40.497c3"
+            ]
+        ]
+    },
+    {
+        "id": "2a8590a3.a4508",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "modbus iterator",
+        "func": "msg.payload = flow.a.next().value;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "// Code added here will be run once\n// whenever the node is started.\nfunction* modbusLoop() {\n    var index = 0;\n    while (true) {\n        var modbusList = flow.get('modbus');\n        for (var i in modbusList) {\n            yield [i, modbusList[i]];\n        }\n    }\n}\n\nflow.a = modbusLoop();",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 660,
+        "wires": [
+            [
+                "9234e58b.f5d678"
+            ]
+        ]
+    },
+    {
+        "id": "9234e58b.f5d678",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "set modbus getter params",
+        "func": "let address = msg.payload[0];\nlet quantity;\nswitch (msg.payload[1]['format']) {\n    case 'char':\n        quantity = 1;\n        break;\n    case 'byte':\n        quantity = 1;\n        break;\n    case 'short':\n        quantity = 1;\n        break;\n    case 'int':\n        quantity = 2;\n        break;\n    case 'uint':\n        quantity = 2;\n        break;\n    case 'long64':\n        quantity = 4;\n        break;\n    case 'float':\n        quantity = 2;\n        break;\n    case 'double':\n        quantity = 4;\n        break;\n}\nmsg.payload = { 'fc': 3, 'unitid': 1, 'address': address , 'quantity': quantity }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1230,
+        "y": 700,
+        "wires": [
+            [
+                "e8f54835.b6c6e8"
+            ]
+        ]
+    },
+    {
+        "id": "900bffd1.c45a1",
+        "type": "function",
+        "z": "f6f2187d.f17ca8",
+        "name": "add metadata",
+        "func": "let modbusList = flow.get('modbus');\nlet address = msg.modbusRequest.address;\nmsg.value = msg.payload;\nmsg.rw = modbusList[address]['rw'];\nmsg.designation = modbusList[address]['designation'];\nmsg.unit = modbusList[address]['unit'];\nmsg.note = modbusList[address]['note'];\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1080,
+        "y": 900,
+        "wires": [
+            [
+                "9e6c6538.f0d568"
+            ]
+        ]
+    },
+    {
+        "id": "572b3a0b.c87bd4",
+        "type": "debug",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "3919adde.d9f6e2",
+        "type": "timeouttrigger",
+        "z": "f6f2187d.f17ca8",
+        "ontimeouttype": "str",
+        "ontimeoutval": "timeout",
+        "duration": "200",
+        "units": "ms",
+        "name": "",
+        "x": 670,
+        "y": 820,
+        "wires": [
+            [
+                "1b28310a.ae2dff"
+            ]
+        ]
+    },
+    {
+        "id": "e8f54835.b6c6e8",
+        "type": "modbus-flex-getter",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "showStatusActivities": true,
+        "showErrors": true,
+        "logIOActivities": false,
+        "server": "22ea05c6.d1611a",
+        "useIOFile": false,
+        "ioFile": "",
+        "useIOForPayload": false,
+        "emptyMsgOnFail": false,
+        "keepMsgProperties": false,
+        "x": 1210,
+        "y": 740,
+        "wires": [
+            [],
+            [
+                "e5ac3997.9246c8"
+            ]
+        ]
+    },
+    {
+        "id": "66898f40.497c3",
+        "type": "ui_form",
+        "z": "f6f2187d.f17ca8",
+        "name": "",
+        "label": "Copy/Paste data from PDF",
+        "group": "963da5dd.6c08c8",
+        "order": 1,
+        "width": "12",
+        "height": "10",
+        "options": [
+            {
+                "label": "",
+                "value": "data",
+                "type": "multiline",
+                "required": true,
+                "rows": 15
+            }
+        ],
+        "formValue": {
+            "data": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "topicType": "msg",
+        "splitLayout": false,
+        "x": 780,
+        "y": 1220,
+        "wires": [
+            [
+                "7af46604.7ba1c8"
+            ]
+        ]
+    }
+]

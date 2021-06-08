@@ -1,0 +1,16 @@
+{
+  "modbus-contrib": {
+    "label": {
+      "unitId": "Unit-Id",
+      "showActivities": "Show Activities",
+      "showErrors": "Show Errors",
+      "functioncode": "FC",
+      "address": "Address",
+      "quantity": "Quantity",
+      "simpleNegatives": "Negative UInt",
+      "server": "Server",
+      "emptyMsgOnFail": "Empty msg on fail",
+      "keepMsgProperties": "Keep Msg Properties"
+    }
+  }
+}
